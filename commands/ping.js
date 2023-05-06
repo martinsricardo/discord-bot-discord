@@ -10,13 +10,13 @@ module.exports = {
     .setDescription("Replies with Pong!"),
   async execute(interaction) {
     //ephemeral: true  tem que ver com privado
-    await interaction.reply("reposta");
+    //await interaction.reply("reposta");
     //const message = await interaction.fetchReply();
     //console.log(message);
     await interaction.deferReply();
     await wait(4000);
     await interaction.editReply('Pong!');
-    await interaction.deleteReply(); // elimina a resposta anterior
+    //await interaction.deleteReply(); // elimina a resposta anterior
     await interaction.followUp('Pong again!'); //o bot escreve PONG
   },
 };
